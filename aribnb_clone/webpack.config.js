@@ -1,25 +1,37 @@
+const path = require("path");
+
 module.exports = {
-  "output": {
-    "filename": "[name].pack.js"
+  mode: "development",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.pack.js",
+    clean: {
+      keep: /index.html/,
+    },
   },
-  "module": {
-    "rules": [
+  resolve: {
+    alias: {
+      Logo: path.resolve(__dirname, "images/airbnb-logo.png"),
+    },
+    extensions: [".js", ".jsx"],
+  },
+  module: {
+    rules: [
       {
-        "use": {
-          "loader": "babel-loader",
-          "options": {
-            "presets": [
-              "babel-preset-env",
-              "babel-preset-react"
-            ]
-          }
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
         },
-        "exclude": /node_modules/,
-        "test": /\.js$/
-      }
-    ]
+        exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)/,
+        type: "asset/inline",
+      },
+    ],
   },
-  "entry": {
-    "index": "./index"
-  }
+  entry: path.resolve(__dirname, "index.js"),
 };
