@@ -1,8 +1,7 @@
-import React from "react";
 import logo from "Logo";
+import React from "react";
 
 export const NavBar = () => {
-  const sample = "11";
   return (
     <nav className="navbar">
       <img src={logo} className="navbar--img" />
