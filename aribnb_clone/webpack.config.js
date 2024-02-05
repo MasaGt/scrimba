@@ -12,6 +12,7 @@ module.exports = {
   resolve: {
     alias: {
       Logo: path.resolve(__dirname, "images/airbnb-logo.png"),
+      Css: path.resolve(__dirname, "style.css"),
     },
     extensions: [".js", ".jsx"],
   },
@@ -26,6 +27,12 @@ module.exports = {
         },
         exclude: /node_modules/,
         test: /\.(js|jsx)$/,
+      },
+      {
+        // css
+        test: /\.css/,
+        use: ["style-loader", "css-loader"],
+        include: path.resolve(__dirname),
       },
       {
         test: /\.(jpe?g|png|gif|svg)/,
