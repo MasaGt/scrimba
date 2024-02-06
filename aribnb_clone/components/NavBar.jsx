@@ -1,10 +1,10 @@
-import logo from "Logo";
 import React from "react";
+import Logo from "Img/airbnb-logo.png";
 
 export const NavBar = () => {
   return (
     <nav className="navbar">
-      <img src={logo} className="nav--logo" />
+      <img src={Logo} className="nav--logo" />
     </nav>
   );
 };
