@@ -13,3 +13,8 @@ body {
   height: 70px;
   padding: 20px 36px;
 }
+
+/* for safari */
+.nav--logo {
+  max-width: 100px;
+}

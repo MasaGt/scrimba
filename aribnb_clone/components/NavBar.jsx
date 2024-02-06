@@ -4,7 +4,7 @@ import React from "react";
 export const NavBar = () => {
   return (
     <nav className="navbar">
-      <img src={logo} className="navbar--img" />
+      <img src={logo} className="nav--logo" />
     </nav>
   );
 };
