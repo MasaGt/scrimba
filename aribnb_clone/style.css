@@ -7,6 +7,14 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.gray {
+  color: #918e9b;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 /* ---- ↓Header section ---- */
 .navbar {
   box-shadow: 0 2.5px 7.5px rgba(0, 0, 0, 0.1);
@@ -42,4 +50,37 @@ section {
 .hero--p {
   width: 320px;
   margin-top: 0;
+}
+
+/* ---- ↓Card section ---- */
+.card {
+  padding: 37px;
+}
+
+.card--container {
+  position: relative;
+  width: 175px;
+  font-size: 12px;
+}
+
+.card--tag {
+  background-color: white;
+  border-radius: 2px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.card--img {
+  border-radius: 9px;
+  width: 100%;
+}
+
+.card--review {
+  display: flex;
+  align-items: center;
+}
+
+.card--review .review--icon {
+  height: 14px;
 }
