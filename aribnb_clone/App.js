@@ -20,6 +20,7 @@ export default function App() {
         location={data.location}
         heading={data.title}
         price={data.price}
+        openSpots={data.openSpots}
       />
     );
   });

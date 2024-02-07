@@ -1,11 +1,18 @@
 import React from "react";
 // import cardImg from "Img/katie-zaferes.png";
 import reviewIcon from "Img/star.png";
+import data from "../data";
 
 export const Card = (props) => {
+  let tagText;
+  if (props.openSpots <= 0) {
+    tagText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    tagText = "Online";
+  }
   return (
     <div className="card--container">
-      <span className="card--tag">SOULD OUT</span>
+      {tagText && <span className="card--tag">{tagText}</span>}
       <img
         src={require(`Img/${props.img}`)}
         className="card--img"
