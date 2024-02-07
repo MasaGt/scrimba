@@ -54,11 +54,17 @@ section {
 }
 
 /* ---- ↓Card section ---- */
-.card {
-  padding: 37px;
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
 }
 
 .card--container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
   font-size: 1.2rem;
   position: relative;
   width: 175px;
